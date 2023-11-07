@@ -3,7 +3,7 @@ const axios = require('axios');
 const { API_URL, API_KEY} = process.env;
 const { Videogame, Genre } = require('../db');
 
-const getVideogamesById = async (id) => {
+const getById = async (id) => {
    
     if(!isNaN(id)) {
         const result = (await axios.get(`${API_URL}/${id}?key=${API_KEY}`)).data;
@@ -16,7 +16,7 @@ const getVideogamesById = async (id) => {
             rating: Math.floor(result.rating),
             platforms: result.platforms.map((p) => p.platform.name).join(", "),
             genres: result.genres.map((g) => {
-              return { name: g.name };
+              return { name: g.name }
             }),
         };
     } else {
@@ -42,4 +42,4 @@ const getVideogamesById = async (id) => {
     }
 };
 
-module.exports = getVideogamesById;
+module.exports = getById;

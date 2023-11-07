@@ -4,7 +4,7 @@ const { API_URL, API_KEY } = process.env;
 const { Videogame, Genre } = require('../db');
 const { Op } = require('sequelize');
 
-const getVideogameByName = async (name) => {
+const getByName = async (name) => {
 
     const foundDbVG = await Videogame.findAll({
         attributes: ['id', 'image', 'name'],
@@ -42,4 +42,4 @@ const getVideogameByName = async (name) => {
     return foundVG
 };
 
-module.exports = getVideogameByName;
+module.exports = getByName;

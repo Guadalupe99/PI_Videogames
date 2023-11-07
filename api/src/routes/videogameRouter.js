@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const { getById } = require('../controllers/getById');
 const { getByname } = require('../controllers/getByName');
-
 const gameRouter = Router();
 
 gameRouter.get('/', async (req, res) => {
