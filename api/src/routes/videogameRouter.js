@@ -1,12 +1,14 @@
 const { Router } = require('express');
-const { getById } = require('../controllers/getById');
-const { getByname } = require('../controllers/getByName');
+const getById = require('../controllers/getById');
+const getByName = require('../controllers/getByName');
+const postVideogame = require('../controllers/post');
+
 const gameRouter = Router();
 
 gameRouter.get('/', async (req, res) => {
     const { name } = req.query;
     try {
-        const videogames = await getByname(name);
+        const videogames = await getByName(name);
 
         if (videogames.length === 0){
             return res.status(404).json({message: 'No se encontraron videojuegos'});
@@ -28,4 +30,30 @@ gameRouter.get('/:id', async (req, res) => {
     }
 });
 
+gameRouter.post('/', async (req, res) => {
+  const {
+    id,
+    name,
+    description,
+    platforms,
+    image,
+    releaseDate,
+    rating,
+    genres,
+  } = req.body;
+  try {
+    const response = await postVideogame(
+      name,
+      description,
+      platforms,
+      image,
+      releaseDate,
+      rating,
+      genres
+    );
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 module.exports = gameRouter;
