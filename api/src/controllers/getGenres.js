@@ -16,10 +16,10 @@ const getGenres = async () => {
                 name: genre.name
             }
         })
-        console.log(`Created or found genre: ${genre.name}`);
+        console.log(`Create: ${genre.name}`);
     })
     const genres = await Genre.findAll();
-    console.log('Fetched genres from the database:', genres);
+    console.log('database:', genres);
     return genres;
     
     
