@@ -6,7 +6,7 @@ const { API_GENRE, API_KEY } = process.env
 const getGenres = async () => {
     const response = await axios.get(`${API_GENRE}?key=${API_KEY}`) 
     
-    const getApi = response.data
+    const getApi = response.data.results
     //console.log(getApi);
     
     getApi.forEach((genre) => {
@@ -16,10 +16,10 @@ const getGenres = async () => {
                 name: genre.name
             }
         })
-        console.log(`Create: ${genre.name}`);
+        //console.log(`Create: ${genre.name}`);
     })
     const genres = await Genre.findAll();
-    console.log('database:', genres);
+
     return genres;
     
     

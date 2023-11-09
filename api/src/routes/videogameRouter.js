@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const getAll = require('../controllers/getAll');
 const getById = require('../controllers/getById');
 const getByName = require('../controllers/getByName');
 const postVideogame = require('../controllers/post');
@@ -53,7 +54,7 @@ gameRouter.post('/', async (req, res) => {
     );
     res.status(200).json(response);
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).send({ error: error.message });
   }
 });
 module.exports = gameRouter;
