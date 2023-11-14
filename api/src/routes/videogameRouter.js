@@ -9,6 +9,11 @@ const gameRouter = Router();
 gameRouter.get('/', async (req, res) => {
     const { name } = req.query;
     try {
+        if (!name) {
+            const response = await getAll();
+            return res.status(200).json(response)
+        }
+
         const videogames = await getByName(name);
 
         if (videogames.length === 0){
@@ -38,7 +43,7 @@ gameRouter.post('/', async (req, res) => {
     description,
     platforms,
     image,
-    releaseDate,
+    released,
     rating,
     genres,
   } = req.body;
@@ -48,7 +53,7 @@ gameRouter.post('/', async (req, res) => {
       description,
       platforms,
       image,
-      releaseDate,
+      released,
       rating,
       genres
     );

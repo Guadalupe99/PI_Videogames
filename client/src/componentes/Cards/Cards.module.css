@@ -1,0 +1,54 @@
+.pagination{
+    margin: 6px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+
+.filtergenre {
+  margin-bottom: 10px;
+}
+
+.filtergenre button {
+  background-color: black;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  color: #fff;
+}
+.filtergenre button:hover {
+ background-color: red;
+}
+
+.filter button {
+  margin-right: 5px;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 9px;
+  background-color: black;
+  border: 1px solid #d0013cce;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(87, 87, 87);
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

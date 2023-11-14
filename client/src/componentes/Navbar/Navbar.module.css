@@ -1,0 +1,43 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to right, #01001df5 60%, #df0202 200%);
+    color: #fff;
+    border: 2px solid #060404;
+    border-radius: 9px;
+    margin-bottom: 5px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row; 
+}
+
+.Link{
+    padding: 10px;
+    height: 40%;
+    background: linear-gradient(to right, #23188a 5%, #980101 75%);
+    border: 2.5px solid #000000;
+    border-radius: .9em;
+    font-size: 15px;
+    margin-top: 12.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Link a{
+    text-decoration: none;
+    color: rgba(243, 243, 243, 0.932);
+    cursor: pointer
+}
+
+
+    
+.custom{
+    border-radius: 6em;
+    width: 85px;
+    height: 75px;
+   
+    vertical-align: top;
+    cursor: pointer;
+}

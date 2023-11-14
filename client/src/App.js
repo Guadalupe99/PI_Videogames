@@ -1,9 +1,24 @@
 import './App.css';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import Navbar from './componentes/Navbar/Navbar';
+import Landing from './views/Landing/Landing';
+import Home from './views/Home/Home';
 
-function App() {
+
+
+const App = () => {
+  const location = useLocation();
+  const [page, setPage] = useState(0);
+
   return (
     <div className="App">
-      <h1>Henry Videogames</h1>
+      {location.pathname !== '/' && <Navbar setPage={ setPage } />}
+      
+      <Routes>
+        <Route path='/' element={<Landing/>} />
+        <Route path='/home' element={<Home/>} />
+      </Routes>
     </div>
   );
 }
