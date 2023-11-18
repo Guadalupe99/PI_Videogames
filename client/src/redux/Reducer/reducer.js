@@ -1,10 +1,11 @@
-import { GET_ALLGAMES, GET_GENRES, GET_GAMESBYNAME } from '../Actions/actions_type';
+import { GET_ALLGAMES, GET_GENRES, GET_GAMESBYNAME, GET_DETAIL, CLEAN_DETAIL, POST_GAMES } from '../Actions/actions_type';
 
 const initialState = {
+    games: [],
     allGames: [],
     gamesByname: [],
     genres: [],
-    copyAllGames: [],
+    detail: {},
   };
 
   const reducer = (state = initialState, action) => {
@@ -12,8 +13,8 @@ const initialState = {
       case GET_ALLGAMES:
         return {
           ...state,
+          games: action.payload,
           allGames: action.payload,
-          copyAllGames: action.payload,
         };
       case GET_GENRES:
         return {
@@ -23,8 +24,22 @@ const initialState = {
       case GET_GAMESBYNAME:
         return {
           ...state,
+          games: action.payload,
           gamesByname: action.payload,
         };
+      case GET_DETAIL:
+        return {
+          ...state,
+          detail: action.payload
+        };
+      case CLEAN_DETAIL:
+        return {
+          ...state,
+          detail: {},
+        };
+      case POST_GAMES:
+        return { ...state };
+
         default:
             return state;
     }
