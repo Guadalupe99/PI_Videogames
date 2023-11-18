@@ -8,10 +8,10 @@ import styles from './Form.module.css';
 const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { gamesGenres } = useSelector((state) => state);
+    const { gamesGenres } = useSelector((state) => state.genres);
 
     useEffect(() => {
-        if (gamesGenres.length === 0) {
+        if (!gamesGenres || gamesGenres.length === 0) {
             dispatch(getGenres());
         }
     }, [dispatch]);
