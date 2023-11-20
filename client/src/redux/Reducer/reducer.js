@@ -24,8 +24,8 @@ const initialState = {
       case GET_GAMESBYNAME:
         return {
           ...state,
-          games: action.payload,
-          gamesByname: action.payload,
+          games: [action.payload],
+          gamesByname: [action.payload],
         };
       case GET_DETAIL:
         return {

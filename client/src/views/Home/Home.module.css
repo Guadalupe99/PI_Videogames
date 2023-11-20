@@ -1,25 +1,3 @@
-.container{
-    background: linear-gradient(to right, #07035152 60%, #cf020295 200%);
-    background-size: contain; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-    background-position: center; /* Centra la imagen */
-    border-radius: 9px;
-}
-
-.imageContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.imageContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
-/* background-position: center; Centra la imagen */ 
+.body {
+background: rgba(55, 55, 55, 0.628);
+ }

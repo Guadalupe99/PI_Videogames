@@ -219,7 +219,7 @@ const Form = () => {
                     <div>
                         <label className={ styles.label }>Genres</label>
                         <select onChange={ handleSelect } className={ styles.select }>
-                            <option value={ form.genres } className={ styles.option }>{' '} Select genres </option>
+                            <option value={ form.genres } className={ styles.option }>{' '} Select Genres </option>
                             {gamesGenres?.map((genre) => {
                                 return (
                                     <option key={ genre.id } name={ genre.id } value={ genre.id }>{ genre.name }</option>
@@ -243,6 +243,9 @@ const Form = () => {
                     type='submit'
                     className={ styles.create }
                     disabled={ !disableSubmit()}>Crear Videogame</button>
+                    {/* <div className={ styles.img }>
+                            <img src={Fondo} alt="Imagen de Home" />
+                    </div> */}
                 </form>
             </div>
         </div>

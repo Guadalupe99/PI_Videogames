@@ -15,8 +15,9 @@
 }
 
 .Link{
+    margin-left: 62%;
     padding: 10px;
-    height: 40%;
+    height: 55%;
     background: linear-gradient(to right, #23188a 5%, #980101 75%);
     border: 2.5px solid #000000;
     border-radius: .9em;

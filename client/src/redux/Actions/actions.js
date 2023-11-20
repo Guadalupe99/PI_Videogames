@@ -15,15 +15,21 @@ export const getAllGames = () => {
 };
 
 export const getGamesByName = (name) => {
-    return async (dispatch) => {
-        const respuesta = await axios.get(`${url}/videogames?name=${name}`);
-
-        return dispatch({
-            type: GET_GAMESBYNAME,
-            payload: respuesta.data,
-        });
-    };
-};
+    return async function (dispatch) {
+      try {
+        const { data } = await axios.get(
+            `${url}/videogames?name=${name}`
+        );
+        dispatch({ type: GET_GAMESBYNAME, payload: data });
+      } catch (error) {
+        const errorData = {
+          message: "Error: Videogame not found",
+          status: error.response ? error.response.status : null,
+        };
+        throw errorData;
+}
+  };
+  };
 
 export const getGenres = () => {
     return async (dispatch) => {

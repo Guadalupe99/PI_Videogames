@@ -1,0 +1,112 @@
+.body {
+    padding: 20px;
+    background-color: #0403031d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.container {
+    padding: 20px;
+    border: 1px solid #dd0404;
+    border-radius: 5px;
+    background: linear-gradient(to right, #000000da 25%, #7b0000 100%);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    overflow-y: auto;
+    max-height: 60vh;
+    font-size: 15px;
+}
+
+.containerImg img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #eee202d4;
+    border-radius: 10px;
+    float: left;
+}
+
+
+
+  
+  .boton {
+    margin-left: 1rem;
+    border-radius: 5rem;
+    margin-top: .5rem;
+    width: 5rem;
+    height: 2.2rem;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    border: transparent;
+    overflow: hidden;
+    transition: 300ms;
+  }
+  
+  .boton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #000b498f;
+    box-shadow: 0 0 2rem #730000, 0 0 4rem #fd0202, 0 0 8rem #690101;
+  }
+
+
+
+/* details
+container
+link
+img */
+
+/* .container{
+    background: linear-gradient(to right, #000000 60%, #0082ad 200%);
+    background-repeat: no-repeat;
+    background-size: 250vh;
+    background-position: center center;
+    border: 2px solid black;
+    backdrop-filter: blur(5px);
+    
+} */
+
+
+/* .container .contenido img{
+    right: 25px;
+    width: 400px;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+
+    
+}
+
+
+.container .contenido h1{
+    align-items: center;
+    border: 3px solid blue;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #000;
+}
+
+.container .contenido h2{
+    
+    
+    width: 99.5%;
+    text-align: center;
+    font-size: 18px;
+    border: 3px solid red;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.container .contenido h3{
+    text-align: center;
+    font-size: 18px;
+    border: 3px solid red;
+    border-radius: 5px;
+    color: #fff;
+} */

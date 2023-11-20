@@ -2,18 +2,20 @@ import {Link} from 'react-router-dom';
 import React from 'react';
 import styles from './Card.module.css';
 
-const Card = ({ game }) => {
+const Card = ({ id, name, genres, background_image }) => {
     return (
-        <Link to={`/detail/${game.id}`}>
-            <div calssName={ styles.container }>
-                <h1>{ game.name }</h1>
-                <h2>Genres: {game.genres}</h2>
-                <div className={ styles.imagen }>
-                    <img src={game.backgroun_image} alt='Cargando...'/>
+        <Link to={`/detail/${id}`} className={ styles.a }>
+            <div className={styles.card}>
+                <div className={ styles.textBoxName }>
+                <h1>{name}</h1>
+                <h2>Genres: {genres}</h2>
+                </div>
+                <div className={styles.imagen}>
+                    <img src={background_image} alt='Cargando...' className={ styles.image} />
                 </div>
             </div>
         </Link>
-    )
-}
+    );
+};
 
-export default Card;
+export default Card;

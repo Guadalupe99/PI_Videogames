@@ -1,0 +1,116 @@
+.link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    border-radius: 12px;
+    margin-top: .5rem;
+    width: 5rem;
+    height: 2.2rem;
+    background: linear-gradient( rgba(51, 0, 255, 0.412), #01001dc7 60%);
+    overflow: hidden;
+    transition: 300ms;
+    color: black;
+    border: 1px solid #000000;
+  }
+  
+  .boton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #1206025b;
+    box-shadow: 0 0 1rem #050200c5, 0 0 4rem #ff0101a0, 0 0 8rem #ff0000;
+  }
+  
+  .form {
+    padding: 12px;
+    display: grid;
+    gap: 20px;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .create {
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: rgba(167, 5, 5, 0.768);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 25rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .8s;
+    border: 1px solid #000000;
+  }
+  
+  .create:hover {
+    background-color: #00000075;
+    border-radius: 2rem;
+  }
+  
+  .label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .inputs {
+    background-color: #1e00ff2e;
+    border: transparent;
+    border-radius: 25rem;
+    font-size: 16px;
+    padding: 5px 25px;
+    text-align: center;
+    transition: .8s;
+  }
+  
+  .inputs:hover {
+    background-color: #4903df71;
+    border-radius: 2rem;
+  }
+  
+  .inputs:focus {
+    border-radius: none;
+    border: none;
+  }
+  
+  .select {
+    background-color: rgba(167, 5, 5, 0.768);
+    color: black;
+    border: transparent;
+    border-radius: 25rem;
+    font-size: 16px;
+    padding: 5px 25px;
+    text-align: center;
+    transition: .8s;
+    width: 240px;
+    outline: none;
+  }
+  
+  .select:hover {
+    background-color:  rgba(51, 0, 255, 0.341);
+    border-radius: 2rem;
+  }
+  
+  .select:focus {
+    border-radius: none;
+    border: none;
+  }
+  
+  
+  .option {
+    font-size: 16px;
+    padding: 5px 5px;
+  }
+  

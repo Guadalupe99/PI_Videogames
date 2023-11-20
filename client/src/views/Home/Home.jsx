@@ -3,7 +3,7 @@ import Paginacion from '../../componentes/Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllGames, getGenres } from '../../redux/Actions/actions';
-import Fondo from './FondoFichines.jpg';
+// import Fondo from './FondoFichines.jpg';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -50,9 +50,9 @@ const Home = () => {
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage} />
                     </div>
-                    <div className={ styles.img }>
+                    {/* <div className={ styles.img }>
                             <img src={Fondo} alt="Imagen de Home" />
-                    </div>
+                    </div> */}
                 </div>
             )}
             </div>
