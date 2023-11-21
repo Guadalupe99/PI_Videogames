@@ -1,22 +1,45 @@
-import { useState } from 'react';
-import styles from './SearchBar.module.css';
+import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { getGamesByName } from '../../redux/Actions/actions';
+import style from './SearchBar.module.css';
 
-const SearchBar = ({ onSearch }) => {
-    const [name, setName] = useState('');
+const SearchBar = ({ setCurrentPage }) => {
+    const dispatch = useDispatch();
+    const [search, setSearch] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (event) => {
-        const value = event.target.value;
-        if (!/\d/.test(value)){
-            setName(value);
-            onSearch(value);
-            
+        event.preventDefault();
+        setSearch(event.target.value);
+    };
+
+    const submit = (event) => {
+        event.preventDefault();
+        if (search.length > 0) {
+            try {
+                dispatch(getGamesByName(search.toLowerCase()));
+                setSearch('');
+                setCurrentPage(1);
+            } catch (error) {
+                alert('Videogames not found');
+            }
         }
     };
 
-    return (
-        <div className={ styles.container }>
-            <input type='search' value={name} onChange={handleChange} placeholder='Ingrese un juego' />
-            <button onClick={() => onSearch(name)}>Buesqueda</button>
+    return( 
+        <div>
+            <form onSubmit={submit}>
+                <div className={style.container}>
+                    <input
+                      type='search'
+                      onChange={handleChange}
+                      value={search}
+                      placeholder="Search your videogame..."
+                      className={style.inputs}
+                      />
+                      <button disabled={isLoading}>SearchBar</button>
+                </div>
+            </form>
         </div>
     );
 };

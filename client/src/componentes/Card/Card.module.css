@@ -35,3 +35,11 @@
     transform: scale(1.1);
     border-radius: 35px;
   }
+
+  .image {
+  object-fit: cover; /* o object-fit: contain; */
+  object-position: center center; /* Puedes ajustar esto si necesitas cambiar la posición de la imagen */
+  height: 180px; /* Ajusta esta altura según el diseño de tu tarjeta */
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  }

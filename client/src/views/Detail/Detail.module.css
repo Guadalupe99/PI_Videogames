@@ -41,7 +41,7 @@
     margin-top: .5rem;
     width: 5rem;
     height: 2.2rem;
-    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    background: linear-gradient( rgba(51, 0, 255, 0.412), #01001dc7 60%);
     border: transparent;
     overflow: hidden;
     transition: 300ms;

@@ -1,3 +1,15 @@
 .body {
-background: rgba(55, 55, 55, 0.628);
- }
+    margin: 0;
+    padding: 0;
+    height: 150vh;
+    background-size: cover;
+    /* background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d9e6161a-962f-4986-a8e2-5ae6a53fd317/d4n85cg-2352b9f6-4f2e-4e93-a9da-7086574b37b7.png'); */
+  }
+  
+  .espera {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

@@ -4,3 +4,6 @@ export const GET_GENRES = 'GET_GENRES';
 export const GET_DETAIL = 'GET_DETAIL';
 export const CLEAN_DETAIL = 'CLEAN_DETAIL';
 export const POST_GAMES = 'POST_GAMES';
+export const FILTER_GENRE = 'FILTER_GENRE';
+export const ORDER = 'ORDER';
+export const CREATE = 'CREATE';
