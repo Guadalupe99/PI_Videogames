@@ -47,6 +47,7 @@ const initialState = {
             : allGamesGenre.filter((game) => {
               return game.genres.some((name) => name === action.payload);
             });
+            console.log(allGamesGenre);
             return {
               ...state,
               games: genreFiltered,

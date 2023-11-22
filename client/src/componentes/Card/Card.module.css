@@ -13,7 +13,7 @@
   
   /* ------------------------------------------------------------------------------------------ */
   .textBoxName {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     height: 77%;
     margin: 10px;
@@ -37,9 +37,10 @@
   }
 
   .image {
-  object-fit: cover; /* o object-fit: contain; */
+  object-fit: contain; /* o object-fit: contain; */
   object-position: center center; /* Puedes ajustar esto si necesitas cambiar la posición de la imagen */
-  height: 180px; /* Ajusta esta altura según el diseño de tu tarjeta */
+  height: 140px; /* Ajusta esta altura según el diseño de tu tarjeta */
   width: 100%;
-  border-radius: 30px 30px 0 0;
+  border-radius:0 0 30px 30px ;
+  margin: 1px;
   }

@@ -1,9 +1,20 @@
+.body {
+    margin: 0;
+    padding: 0;
+    height: 150vh;
+   
+  background-image: url('https://media.gettyimages.com/id/184601291/es/foto/xxxl-hormig%C3%B3n-oscuro.jpg?s=612x612&w=0&k=20&c=lE0969m0ExEDRcR00Bvspa5xBBUO2SHAKGMwAhxSBQQ=');
+}
 .link {
     color: black;
     text-decoration: none;
   }
   
-  .boton {
+  .boton {    
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +23,8 @@
     margin-top: .5rem;
     width: 5rem;
     height: 2.2rem;
-    background: linear-gradient( rgba(51, 0, 255, 0.412), #01001dc7 60%);
+    background: linear-gradient(#883434, rgba(255, 0, 0, 0.552));
+
     overflow: hidden;
     transition: 300ms;
     color: black;
@@ -43,7 +55,7 @@
   .create {
     display: inline-block;
     padding: 5px 30px;
-    background-color: rgba(167, 5, 5, 0.768);
+    background-color: rgba(244, 244, 244, 0.389);
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -56,17 +68,18 @@
   }
   
   .create:hover {
-    background-color: #00000075;
+    background-color: rgb(255, 255, 255);
     border-radius: 2rem;
   }
   
   .label {
     font-size: 16px;
     margin-right: 10px;
+    color: white;
   }
   
   .inputs {
-    background-color: #1e00ff2e;
+    background-color: rgba(255, 0, 0, 0.397);
     border: transparent;
     border-radius: 25rem;
     font-size: 16px;
@@ -76,7 +89,7 @@
   }
   
   .inputs:hover {
-    background-color: #4903df71;
+    background-color: rgba(255, 0, 0, 0.794);
     border-radius: 2rem;
   }
   
@@ -86,7 +99,7 @@
   }
   
   .select {
-    background-color: rgba(167, 5, 5, 0.768);
+    background-color: rgba(244, 244, 244, 0.389);
     color: black;
     border: transparent;
     border-radius: 25rem;
@@ -99,13 +112,16 @@
   }
   
   .select:hover {
-    background-color:  rgba(51, 0, 255, 0.341);
+    background-color:  rgb(255, 255, 255);
     border-radius: 2rem;
   }
   
   .select:focus {
     border-radius: none;
     border: none;
+  }
+  .select option:checked {
+    color: white; /* Cambiar el color del texto aquí */
   }
   
   

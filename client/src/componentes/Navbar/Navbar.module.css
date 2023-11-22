@@ -4,13 +4,14 @@
     justify-content: space-around;
     background: transparent;
     height: 2rem;
-    background: linear-gradient(to right, #01001df5 60%, #df0202 170%);
-    color: #fff;
-    width: 100%;
-    height: 25%;
+    background: rgba(255, 0, 0, 0.552);
+    color: #0a0808;
+    width: 99.7%;
+    height: 10%;
     border: 2px solid #060404;
   }
-  
+/*   
+  linear-gradient(rgba(187, 4, 4, 0.433),#c2c1d2d7 ); */
   
   
   
@@ -20,7 +21,7 @@
     margin-top: .5rem;
     width: 10rem;
     height: 1.5rem;
-    background: linear-gradient(#df0202, rgba(0, 0, 0, 0.544));
+    background: linear-gradient(#716767, rgba(0, 0, 0, 0.692));
     border: 1.5px solid black;
     font-weight: 800;
     margin-bottom: 1rem;
@@ -41,6 +42,14 @@
   .links {
     text-decoration: none;
     color: black;
+  }
+
+  .links:hover {
+    
+    
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 1rem #000000bf, 0 0 4rem #ffffff, 0 0 8rem #0000009b;
   }
 
 

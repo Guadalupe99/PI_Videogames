@@ -1,17 +1,14 @@
 .body {
-    padding: 20px;
-    background-color: #0403031d;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-    max-height: 80vh;
-    overflow-y: auto;
+
+    height: 100vh;
+    background-image: url('https://media.gettyimages.com/id/184601291/es/foto/xxxl-hormig%C3%B3n-oscuro.jpg?s=612x612&w=0&k=20&c=lE0969m0ExEDRcR00Bvspa5xBBUO2SHAKGMwAhxSBQQ=');
+    
+    
 }
 
 .container {
-    padding: 20px;
-    border: 1px solid #dd0404;
+    width: 70%;
+    border: 5px solid #eee1e1e6;
     border-radius: 5px;
     background: linear-gradient(to right, #000000da 25%, #7b0000 100%);
     margin-top: 20px;
@@ -22,36 +19,54 @@
     overflow-y: auto;
     max-height: 60vh;
     font-size: 15px;
+     display: flex;
+  /* Ajusta el tamaño máximo del contenedor */
+  max-width: 800px; /* Cambia este valor según tu preferencia */
+  margin: auto; 
 }
 
 .containerImg img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-    border: 2px solid #eee202d4;
+    border: 2px solid #7f7f7fd4;
     border-radius: 10px;
     float: left;
+    margin: 20px;
 }
 
-
+.link {
+    color: black;
+    text-decoration: none;
+  }
 
   
-  .boton {
+.boton {
+    
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 1rem;
-    border-radius: 5rem;
+    border-radius: 12px;
     margin-top: .5rem;
     width: 5rem;
     height: 2.2rem;
-    background: linear-gradient( rgba(51, 0, 255, 0.412), #01001dc7 60%);
-    border: transparent;
+    background: linear-gradient(#883434, rgba(255, 0, 0, 0.552));
+
     overflow: hidden;
     transition: 300ms;
+    color: black;
+    border: 1px solid #000000;
   }
   
   .boton:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background-color: #000b498f;
-    box-shadow: 0 0 2rem #730000, 0 0 4rem #fd0202, 0 0 8rem #690101;
+    background-color: #1206025b;
+    box-shadow: 0 0 1rem #050200c5, 0 0 4rem #ff0101a0, 0 0 8rem #ff0000;
   }
 
 
