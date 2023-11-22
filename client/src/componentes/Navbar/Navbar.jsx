@@ -35,9 +35,7 @@ const Navbar = ({ setCurrentPage }) => {
 
     return (
         <nav className={styles.nav}>
-            <Link to={"/home"}>
-             <h1> Game Zone </h1>
-            </Link>
+            <h1> Game Zone </h1>
             <select onChange={(event) => createHandler(event)} className={ styles.btns}>
                 <option value='All'>All</option>
                 <option value='Creado'>Creado</option>

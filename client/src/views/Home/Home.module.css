@@ -1,11 +1,9 @@
 .body {
     margin: 0;
     padding: 0;
-    height: 150vh;
+    height: 230vh;
     background-size: cover;
-    /* background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d9e6161a-962f-4986-a8e2-5ae6a53fd317/d4n85cg-2352b9f6-4f2e-4e93-a9da-7086574b37b7.png'); */
-   
-    background: linear-gradient(#000000, rgba(0, 0, 0, 0.544));
+    background-image: url('https://media.gettyimages.com/id/184601291/es/foto/xxxl-hormig%C3%B3n-oscuro.jpg?s=612x612&w=0&k=20&c=lE0969m0ExEDRcR00Bvspa5xBBUO2SHAKGMwAhxSBQQ=');
 }
   
   .espera {

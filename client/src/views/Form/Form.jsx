@@ -8,10 +8,10 @@ import styles from './Form.module.css';
 const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { gamesGenres } = useSelector((state) => state);
+    const  genres  = useSelector((state) => state.genres);
 
     useEffect(() => {
-        if (!gamesGenres || gamesGenres.length === 0) {
+        if (!genres || genres.length === 0) {
             dispatch(getGenres());
         }
     }, [dispatch]);
@@ -51,7 +51,7 @@ const Form = () => {
     };
 
     const handleClearGenres = () => {
-        setForm({ ...form, genress: [] });
+        setForm({ ...form, genres: [] });
     };
 
     const handleSubmit = async (event) => {
@@ -221,7 +221,7 @@ const Form = () => {
                         <label className={ styles.label }>Genres</label>
                         <select onChange={ handleSelect } className={ styles.select }>
                             <option value={ form.genres } className={ styles.option }>{' '} Select Genres </option>
-                            {gamesGenres?.map((genre) => {
+                            {genres?.map((genre) => {
                                 return (
                                     <option key={ genre.id } name={ genre.id } value={ genre.id }>{ genre.name }</option>
                                 );
@@ -232,7 +232,7 @@ const Form = () => {
                             <p style={{ color:'blue' }}>{errorMessage.genres}</p>
                         )}
                         <ul>
-                            {gamesGenres?.map((genre) => {
+                            {genres?.map((genre) => {
                                 if (form.genres.includes(genre.id.toString())) {
                                     return <li key={genre.id}>{genre.name}</li>
                                 }
