@@ -7,7 +7,7 @@ import { order, filter, create } from '../../redux/Actions/actions';
 
 const Navbar = ({ setCurrentPage }) => {
     const dispatch = useDispatch();
-    const { gamesGenres } = useSelector((state) => state.genres);
+    const { genres } = useSelector(state => state);
 
     const filterGenre = (event) => {
         event.preventDefault();
@@ -44,7 +44,7 @@ const Navbar = ({ setCurrentPage }) => {
 
             <select onChange={filterGenre} className={styles.btns}>
                 <option value='All'>All genres</option>
-                {gamesGenres?.map((genre) => {
+                {genres?.map((genre) => {
                     return (
                         <option key={genre.id} name={genre.id} value={genre.name}>
                             {genre.name}

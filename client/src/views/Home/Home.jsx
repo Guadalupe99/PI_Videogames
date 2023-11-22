@@ -13,7 +13,7 @@ const Home = () => {
     const games = useSelector((state) => state.games);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [perPage, setPerPage] = useState(12);
+    const [perPage, setPerPage] = useState(15);
 
     const pagination = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -46,9 +46,9 @@ const Home = () => {
                     <div>
                         <Cards games={currentGames} />
                         <Paginacion
-                            games={games.length}
+                            games={allGames.length}
                             pagination={pagination}
-                            perPAge={perPage}
+                            perPage={perPage}
                             currentPage={currentPage}
                             setCurrentPage={setCurrentPage} />
                     </div>

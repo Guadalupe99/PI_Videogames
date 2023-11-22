@@ -12,12 +12,12 @@ const validations = (gameData) => {
     }
   
     if (
-      gameData.background_image &&
+      gameData.image &&
       !/^(?:https?|ftp):\/\/(?:www\.)?[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}(?:\/[\w#!:.?+=&%@!\-\/]*)?$/.test(
-        gameData.background_image
+        gameData.image
       )
     ) {
-      errors.background_image = "Este campo debe ser una URL";
+      errors.image = "Este campo debe ser una URL";
     }
   
     if (!gameData.released.length) {

@@ -34,8 +34,9 @@ const Form = () => {
 
         setForm({ ...form, [property]: value });
 
-        const errors = validation({ ...form, [property]: value });
-        setErrorMessage(errors);
+        const errors = validation(property, value); // Envía solo el campo cambiado y su valor
+        setErrorMessage({ ...errorMessage, [property]: errors }); // Actualiza solo el mensaje de error para ese campo
+    
     };
 
     const handleSelect = (event) => {
