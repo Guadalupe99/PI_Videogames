@@ -6,12 +6,12 @@ const Cards = ({ games }) => {
 
     return (
         <div className={styles.container}>
-            { games.map((game) => (
+             { games.map((game, index) => (
                 <Card
                     name={game.name}
                     image={game.image}
                     genre={game.genres}
-                    key={game.id}
+                    key={index}
                     id={game.id}
                 />
             ))}

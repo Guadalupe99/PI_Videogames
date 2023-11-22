@@ -21,12 +21,11 @@ const initialState = {
           ...state,
           genres: action.payload,
         };
-      case GET_GAMESBYNAME:
-        return {
-          ...state,
-          games: [action.payload],
-          gamesByname: [action.payload],
-        };
+        case GET_GAMESBYNAME:
+          return {
+              ...state,
+              gamesByname: action.payload,
+          };
       case GET_DETAIL:
         return {
           ...state,
@@ -146,5 +145,4 @@ const initialState = {
     }
   };
 
-  export default reducer;
-  
+  export default reducer;

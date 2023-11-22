@@ -7,7 +7,7 @@ const Landing = () => {
 
     return (
         <div className={ style.principal }>
-            <button className={ style.buttonContainer } onClick={ () => navigate('/home') }>INICIO</button>
+            <button className={ style.buttonContainer } onClick={ () => navigate('/home') }>START</button>
             <div className={ style.imageContainer }>
                 <img src={ FondoL } alt='imagen de fondo' />
             </div>

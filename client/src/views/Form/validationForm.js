@@ -1,4 +1,4 @@
-const validations = (gameData) => {
+export const validation = (gameData) => {
     const errors = {};
   
     if (!gameData.name.length) {

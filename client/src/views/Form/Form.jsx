@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { getGenres, postGame} from '../../redux/Actions/actions';
-import validation from './validationForm.js';
+import {validation} from './validationForm.js';
 import styles from './Form.module.css';
 
 const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { gamesGenres } = useSelector((state) => state.genres);
+    const { gamesGenres } = useSelector((state) => state);
 
     useEffect(() => {
         if (!gamesGenres || gamesGenres.length === 0) {
@@ -34,8 +34,8 @@ const Form = () => {
 
         setForm({ ...form, [property]: value });
 
-        const errors = validation(property, value); // Envía solo el campo cambiado y su valor
-        setErrorMessage({ ...errorMessage, [property]: errors }); // Actualiza solo el mensaje de error para ese campo
+        const errors = validation({ ...form, [property]: value });
+        setErrorMessage(errors);
     
     };
 
