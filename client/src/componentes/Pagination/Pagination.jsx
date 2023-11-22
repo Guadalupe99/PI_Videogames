@@ -13,6 +13,8 @@ const Paginacion = ({ videogames, pagination, perPage, currentPage }) => {
     if(endPage -startPage + 1 < maxPagesToShow) {
         startPage = Math.max(1, endPage - maxPagesToShow + 1); 
     }
+    console.log("startPage:", startPage);
+console.log("endPage:", endPage);
 
     for( let i = startPage; i <= endPage; i++){
         pageNumbers.push(i);
@@ -24,7 +26,7 @@ const Paginacion = ({ videogames, pagination, perPage, currentPage }) => {
 
     const handleFirstPage = () => {
         if (currentPage !== 1) {
-            pagination(pagesCount);
+            pagination(1);
         }
     };
 
@@ -32,35 +34,39 @@ const Paginacion = ({ videogames, pagination, perPage, currentPage }) => {
         if (currentPage !== pagesCount) {
             pagination(pagesCount);
         }
+        console.log(pagesCount)
     };
+
+    console.log(pageNumbers)
 
     return (
         <div className={ styles.Pagination }>
             <button 
-            className={ currentPage !== 1 ? styles['pagination-button'] :
-        styles.disable }
-        onClick={ handleFirstPage }>First</button>
+            className={ styles.disabled }
+            onClick={ handleFirstPage }>First</button>
 
         <button
-        className={ styles.disable }
-        onClick={ () => handleClick(currentPage - 1) }
-        disabled={ currentPage === 1 }>Prev</button>
-
-        {pageNumbers.map((number) => (
-            <div key={ number }>
-                <button 
-                onCLick={ () => handleClick(number) }
-                className={ styles.buttonNumber }>{number}</button>
+        className={ styles.disabled }
+        onClick={ () => handleClick(currentPage - 1) }>Prev</button>
+{pageNumbers.map((number) => (
+    <div key={number}>
+            <button
+              onClick={() => handleClick(number)}
+              className={`${styles.buttonNumber} ${
+                  currentPage === number ? styles["is-current"] : ""
+                }`}
+                >
+              {number}
+            </button>
             </div>
         ))}
 
         <button 
-        className={ styles.disable }
-        onClick={ () => handleClick(currentPage + 1) }
-        disabled={ currentPage === pagesCount }>Next</button>
+        className={ styles.disabled }
+        onClick={ () => handleClick(currentPage + 1) }>Next</button>
 
         <button
-        className={ styles.disable }
+        className={ styles.disabled }
         onClick={ handleLastPage }>Last</button>
         </div>
         );

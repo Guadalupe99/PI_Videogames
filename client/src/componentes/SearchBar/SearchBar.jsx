@@ -16,15 +16,17 @@ const SearchBar = ({ setCurrentPage }) => {
     const submit = (event) => {
         event.preventDefault();
         if (search.length > 0) {
-            try {
-                dispatch(getGamesByName(search.toLowerCase()));
-                setSearch('');
-                setCurrentPage(1);
-            } catch (error) {
-                alert('Videogames not found');
-            }
-        }
+            dispatch(getGamesByName(search.toLowerCase()))
+                .then(() => {
+                    setSearch('');
+                    setCurrentPage(1);
+                })
+                .catch((error) => {
+                    alert('Videogames not found');
+                });
+        }
     };
+  
 
     return( 
         <div>

@@ -4,8 +4,8 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-  }
-  
+}
+
   .buttonContainer {
     position: absolute;
     top: 50%;
@@ -21,6 +21,17 @@
     cursor: pointer;
 }
 
+.buttonContainer:hover {
+    /* Estilos para el botón */
+    background-color: rgba(255, 0, 0, 0.223); /* Color de fondo rojo */
+    font-size: 39px; /* Tamaño de fuente */
+    padding: 16px 31px; /* Espaciado interno del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 45px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
 .imageContainer {
     position: absolute;
     top: 0;
@@ -36,17 +47,6 @@
     object-fit: cover;
 }
 
-.buttonContainer button {
-    /* Estilos para el botón */
-    background-color: rgba(255, 0, 0, 0.56); /* Color de fondo rojo */
-    font-size: 20px; /* Tamaño de fuente */
-    padding: 15px 30px; /* Espaciado interno del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  }
-  
 
  
   

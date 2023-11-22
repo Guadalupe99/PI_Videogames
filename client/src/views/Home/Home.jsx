@@ -3,6 +3,7 @@ import Paginacion from '../../componentes/Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllGames, getGenres } from '../../redux/Actions/actions';
+import Navbar from '../../componentes/Navbar/Navbar';
 // import Fondo from './FondoFichines.jpg';
 import styles from './Home.module.css';
 
@@ -34,10 +35,11 @@ const Home = () => {
 
     return (
         <div className={ styles.body}>
+            <Navbar setCurrentPage={setCurrentPage}/>
 
             {!games.length ? (
                 <div className={ styles.espera }>
-                    <h1>Espere un momento</h1>
+                    <h1>Wait a moment, please</h1>
                 </div>
             ) : (
                 <div>

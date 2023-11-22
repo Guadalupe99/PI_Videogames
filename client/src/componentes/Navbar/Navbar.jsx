@@ -43,7 +43,7 @@ const Navbar = ({ setCurrentPage }) => {
             </select>
 
             <select onChange={filterGenre} className={styles.btns}>
-                <option calue='All'>All genres</option>
+                <option value='All'>All genres</option>
                 {gamesGenres?.map((genre) => {
                     return (
                         <option key={genre.id} name={genre.id} value={genre.name}>
