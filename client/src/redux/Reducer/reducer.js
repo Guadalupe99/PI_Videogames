@@ -45,9 +45,9 @@ const initialState = {
           action.payload === 'All'
             ? allGamesGenre
             : allGamesGenre.filter((game) => {
-              return game.genres.some((name) => name === action.payload);
+              return game.genres.some((genre) => genre.name === action.payload);
             });
-            console.log(allGamesGenre);
+
             return {
               ...state,
               games: genreFiltered,
@@ -126,11 +126,13 @@ const initialState = {
         };
 
       case CREATE:
-        const gameCreado = state.allGames;
+        const gameCreado = [...state.allGames];
         const gameFilter = 
           action.payload === 'Creado'
             ? gameCreado.filter((game) => game.createdInDb)
             : gameCreado.filter ((game) => !game.createdInDb);
+
+            console.log(gameCreado);
         return {
           ...state,
           games:
