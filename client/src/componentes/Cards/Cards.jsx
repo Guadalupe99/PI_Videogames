@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import styles from './Cards.module.css';
 
 const Cards = ({ games }) => {
-
+console.log(games)
     return (
         <div className={styles.container}>
              { games.map((game, index) => (

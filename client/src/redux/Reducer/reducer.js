@@ -127,6 +127,7 @@ const initialState = {
 
       case CREATE:
         const gameCreado = [...state.allGames];
+        // no esta la propiedad createdInDb en gameCreado
         const gameFilter = 
           action.payload === 'Creado'
             ? gameCreado.filter((game) => game.createdInDb)

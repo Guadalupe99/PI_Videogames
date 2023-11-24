@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Card.module.css';
 
 const Card = ({ id, name, genres, image }) => {
+    //no estoy accediendo a genres. Genres es un array de objetos y no un valor unico como id, name, image
     return (
         <Link to={`/detail/${id}`} className={ styles.a }>
             <div className={styles.card}>
