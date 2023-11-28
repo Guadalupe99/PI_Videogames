@@ -7,3 +7,4 @@ export const POST_GAMES = 'POST_GAMES';
 export const FILTER_GENRE = 'FILTER_GENRE';
 export const ORDER = 'ORDER';
 export const CREATE = 'CREATE';
+export const RESET_FILTERS = 'RESET_FILTERS';

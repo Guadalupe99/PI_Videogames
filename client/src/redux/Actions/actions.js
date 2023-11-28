@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ALLGAMES, GET_GAMESBYNAME, GET_GENRES, GET_DETAIL, CLEAN_DETAIL, POST_GAMES, FILTER_GENRE, ORDER, CREATE } from './actions_type';
+import { GET_ALLGAMES, GET_GAMESBYNAME, GET_GENRES, GET_DETAIL, CLEAN_DETAIL, POST_GAMES, FILTER_GENRE, ORDER, CREATE, RESET_FILTERS } from './actions_type';
 
 export const url = 'http://localhost:3001';
 
@@ -85,4 +85,8 @@ export const order = (order) => {
 
 export const create = (create) => {
     return { type: CREATE, payload: create };
+};
+
+export const resetFilters = () => {
+    return { type: RESET_FILTERS };
 };

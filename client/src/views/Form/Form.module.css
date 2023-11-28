@@ -27,7 +27,7 @@
 
     overflow: hidden;
     transition: 300ms;
-    color: black;
+    color: rgb(0, 0, 0);
     border: 1px solid #000000;
   }
   
@@ -48,7 +48,7 @@
     background-color: transparent;
     position: relative;
     overflow: hidden;
-    color: black;
+    color: red;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   

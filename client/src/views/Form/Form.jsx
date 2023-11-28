@@ -50,6 +50,8 @@ const Form = () => {
         event.target.value= '';
     };
 
+    console.log(form.genres);
+
     const handleClearGenres = () => {
         setForm({ ...form, genres: [] });
     };
@@ -132,7 +134,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs }/>{' '}
                         {errorMessage.name && (
-                            <p style={{ color: 'blue' }}>{errorMessage.name}</p>
+                            <p style={{ color: 'red' }}>{errorMessage.name}</p>
                         )}
                     </div>
 
@@ -148,7 +150,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs } />
                         {errorMessage.description && (
-                            <p style={{ color: 'blue'}}>{errorMessage.description}</p>
+                            <p style={{ color: 'red'}}>{errorMessage.description}</p>
                         )}
                     </div>
 
@@ -164,7 +166,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs} />
                         { errorMessage.platforms && (
-                            <p styles={{ color:'blue '}}>{errorMessage.platforms}</p>
+                            <p styles={{ color:'red '}}>{errorMessage.platforms}</p>
                         )}
                     </div>
 
@@ -180,7 +182,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs } />
                         {errorMessage.released && (
-                            <p style={{ color: 'blue' }}>{errorMessage.released}</p>
+                            <p style={{ color: 'red' }}>{errorMessage.released}</p>
                         )}
                     </div>
 
@@ -196,7 +198,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs } />
                         {errorMessage.rating && (
-                            <p style={{ color: 'blue'}}>{errorMessage.rating}</p>
+                            <p style={{ color: 'red'}}>{errorMessage.rating}</p>
                         )}
                     </div>
 
@@ -213,7 +215,7 @@ const Form = () => {
                         onChange={ changeHandler }
                         className={ styles.inputs } />
                         {errorMessage.image && (
-                            <p style={{ color: 'blue' }}>{errorMessage.image}</p>
+                            <p style={{ color: 'red' }}>{errorMessage.image}</p>
                         )}
                     </div>
 
@@ -229,7 +231,7 @@ const Form = () => {
                         </select>
                         <button onClick={ handleClearGenres } className={ styles.create }>Clear Genres</button>
                         {errorMessage.genres && (
-                            <p style={{ color:'blue' }}>{errorMessage.genres}</p>
+                            <p style={{ color:'red' }}>{errorMessage.genres}</p>
                         )}
                         <ul>
                             {genres?.map((genre) => {

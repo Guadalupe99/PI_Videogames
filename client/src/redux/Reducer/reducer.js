@@ -1,4 +1,4 @@
-import { GET_ALLGAMES, GET_GENRES, GET_GAMESBYNAME, GET_DETAIL, CLEAN_DETAIL, POST_GAMES, FILTER_GENRE, ORDER, CREATE} from '../Actions/actions_type';
+import { GET_ALLGAMES, GET_GENRES, GET_GAMESBYNAME, GET_DETAIL, CLEAN_DETAIL, POST_GAMES, FILTER_GENRE, ORDER, CREATE, RESET_FILTERS } from '../Actions/actions_type';
 
 const initialState = {
     games: [],
@@ -134,6 +134,7 @@ const initialState = {
             : gameCreado.filter ((game) => !game.createdInDb);
 
             console.log(gameCreado);
+            console.log(action.payload);
         return {
           ...state,
           games:
@@ -143,6 +144,12 @@ const initialState = {
              ? gameFilter
              : [],
         };
+
+        case RESET_FILTERS:
+          return {
+            ...state,
+            games: state.allGames, // Restaura los juegos a su estado inicial
+          };
         
         default:
             return state;

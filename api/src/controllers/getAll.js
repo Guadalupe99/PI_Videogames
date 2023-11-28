@@ -4,18 +4,16 @@ const { API_URL, API_KEY } = process.env;
 const axios = require('axios');
 
 const getAll = async (req, res) => {
-    const dbVGames = await Videogame.findAll({
-      attributes: ["id", "name", "image", "rating"],
-      include: [
-        {
+
+      const dbVGames = await Videogame.findAll({
+        include: {
           model: Genre,
-          attributes: ["name"],
+          attributes: ['name'],
           through: {
-            attributes: [],
-          },
-        },
-      ],
-    });
+            attributes: []
+          }
+        }
+      })
     const urls = [];
     for (let i = 1; i <= 5; i++) {
       urls.push(axios.get(`${API_URL}?key=${API_KEY}&page=${i}`));
@@ -40,4 +38,4 @@ const getAll = async (req, res) => {
   
     return allGames;
   };
-  module.exports =  getAll;
+  module.exports = getAll;

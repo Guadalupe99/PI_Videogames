@@ -49,6 +49,7 @@ const postVideogame = async (
       image,
       released,
       rating,
+      genres
     });
 
     await newVideogame.addGenre(currentGenre);

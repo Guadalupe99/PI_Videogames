@@ -2,7 +2,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { useDispatch, useSelector } from "react-redux";
-import { getAllGames } from '../../redux/Actions/actions';
+import { getAllGames, resetFilters } from '../../redux/Actions/actions';
 import { order, filter, create } from '../../redux/Actions/actions';
 
 const Navbar = ({ setCurrentPage }) => {
@@ -31,8 +31,11 @@ const Navbar = ({ setCurrentPage }) => {
     const handleReset = (event) => {
         event.preventDefault();
         dispatch(getAllGames());
+        dispatch(resetFilters());
     };
 
+    console.log(resetFilters);
+    
     return (
         <nav className={styles.nav}>
             <h1> Game Zone </h1>
